@@ -16,11 +16,14 @@ header, .contact-me {
     display: flex;
 }
 
+.nav-links a {
+    padding: 10px;
+}
 .ui-design {
    padding: 100px;
 }
 
-.segments {
+header,.segments {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
