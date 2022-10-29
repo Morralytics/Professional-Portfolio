@@ -1,0 +1,32 @@
+body *{
+    border: solid 1px red;
+}
+
+main {
+    display: flex;
+    display: block;
+}
+header, .contact-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    padding: 20px;
+    display: flex;
+}
+
+.ui-design {
+   padding: 100px;
+}
+
+.segments {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.project-page img {
+    max-width: 200px;
+    max-height: 200px;
+}
