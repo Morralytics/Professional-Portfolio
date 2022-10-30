@@ -1,22 +1,15 @@
 html {
     font-family: 'Courier New', Courier, monospace;
 }
-body *{
-    /* border: solid 1px red; */
-}
 
 main {
     display: flex;
-    display: block;
+    justify-content: center;
 }
 header,
 footer {
     display: flex;
     justify-content: space-between;
-}
-
-header,
-footer {
     font-size: 35px;
     background-color: rgb(61, 61, 61);
 }
@@ -26,6 +19,16 @@ pre {
     color: rgb(61, 61, 61);
     background-color: cyan;
 }
+
+h2{
+    text-align: right;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 100px;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -45,13 +48,35 @@ pre {
    padding: 100px;
 }
 
-header,.segments {
+#about-me {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#work {
+    display: flex;
 }
 
 .project-page img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 80%;
+    height: auto;
+    border: 5px solid cyan;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
 }
+
+.project-page img:hover {
+    box-shadow: inset 0px 0px 40px cyan, 0 0 15px cyan; 
+    opacity: 1;
+}
+
+#lower-half {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#lower-half figure {
+    width: 480px;
+}
+ 
