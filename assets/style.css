@@ -1,23 +1,45 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
 body *{
-    border: solid 1px red;
+    /* border: solid 1px red; */
 }
 
 main {
     display: flex;
     display: block;
 }
-header, .contact-me {
+header,
+footer {
     display: flex;
     justify-content: space-between;
 }
 
+header,
+footer {
+    font-size: 35px;
+    background-color: rgb(61, 61, 61);
+}
+
+pre {
+    position: relative;
+    color: rgb(61, 61, 61);
+    background-color: cyan;
+}
 .nav-links {
-    padding: 20px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav-links a {
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px 10px 20px;
+    color: cyan;
+    font-size: 30px;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
 }
 .ui-design {
    padding: 100px;
