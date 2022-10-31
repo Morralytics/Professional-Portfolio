@@ -1,3 +1,8 @@
+:root {
+    --color-gray: rgb(61, 61, 61);
+    --color-border-cyan: cyan;
+    --corner-radius: 10px;
+}
 html {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -6,18 +11,20 @@ main {
     display: flex;
     justify-content: center;
 }
+
 header,
 footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     font-size: 35px;
-    background-color: rgb(61, 61, 61);
+    background-color: var(--color-gray);
 }
 
 pre {
     position: relative;
     color: rgb(61, 61, 61);
-    background-color: cyan;
+    background-color: var(--color-border-cyan);
 }
 
 h2{
@@ -27,6 +34,8 @@ h2{
 p {
     margin-left: 20px;
     margin-right: 100px;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .nav-links {
@@ -39,26 +48,14 @@ p {
     display: flex;
     justify-content: center;
     padding: 10px 20px 10px 20px;
-    color: cyan;
+    color: var(--color-border-cyan);
     font-size: 30px;
     text-underline-offset: 10px;
     text-decoration-thickness: 3px;
 }
-.ui-design {
+.ui-whitespace {
    padding: 100px;
 }
-.text-header {
-    position: absolute;
-    text-align: right;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-right: 10px;
-    font-size: 20px;
-    width: 20%;
-    top: 750px;
-    opacity: 1;
-}
-
 
 #about-me {
     display: flex;
@@ -68,29 +65,26 @@ p {
 
 #work {
     display: flex;
-}
-
-.project-page figure{
-    width: 1180px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .project-page img {
-    position: relative;
-    max-width: 80%;
-    height: auto;
-    border: 5px solid cyan;
+    max-width: 100%;
+    border: 5px solid var(--color-border-cyan);
     opacity: .6;
     transition: all 0.3s ease-in-out;
 }
 
 .project-page img:hover {
-    box-shadow: inset 0px 0px 40px cyan, 0 0 15px cyan; 
+    box-shadow: inset 0px 0px 40px var(--color-border-cyan), 0 0 15px var(--color-border-cyan); 
     opacity: 1;
 }
 
 #lower-half {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     top: 900px;
 }
 
@@ -98,25 +92,57 @@ p {
     width: 480px;
 }
 
+.text-header,
 #led-wall,
 #calculator,
 #minimalist-puzzle,
 #pet-finder {
     position: absolute;
-    margin-top: -75px;
     padding-right: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 10%;
+    border-top-right-radius: var(--corner-radius);
+    border-bottom-right-radius: var(--corner-radius);
     text-align: right;
-    font-size: 15px;
     opacity: 1;
 }
-/* #lower-half pre {
-    position: absolute;
-    top: 50px;
-} */
-/*  
-#led-wall #calculator {
-    position: absolute;
-} */
+
+.text-header {
+    margin-top: -100px; 
+    width: 20%;
+    font-size: 20px;
+}
+
+#led-wall,
+#calculator,
+#minimalist-puzzle,
+#pet-finder {
+    margin-top: -75px; 
+    width: 10%;
+    font-size: 15px;
+}
+
+#profile-picture {
+    width: 200px;
+    height: auto;
+    border: 5px solid black;
+}
+
+@media screen and (max-width: 992px) {
+    p {
+        width: 50%;
+    }
+
+    img {
+        width: 50%;
+    }
+
+    .project-page pre,
+    #lower-half pre {
+        font-size: 50%;
+    }
+
+    header pre,
+    #nav-links,
+    footer pre {
+        width: 50%;
+    }
+  }
